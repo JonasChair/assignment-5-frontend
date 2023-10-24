@@ -44,3 +44,126 @@ header a {
 header a:hover {
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3), inset 0px 1px 10px rgba(0, 0, 0, 0.3);
 }
+
+main {
+    padding: 30px 60px;
+}
+
+.message {
+    text-align: center;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+.success {
+    border-color: rgb(1, 233, 1);
+    color: green;
+}
+
+.error {
+    color: rgb(218, 65, 65);
+}
+
+.pets-wrapper {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.pet-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    transition: 0.3s;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.pet-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.pet-button-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 900;
+    border: 0;
+    border-radius: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.logs-button {
+    background-color: rgb(00, 59, 95, .5);
+}
+.logs-button:hover {
+    box-shadow: 0px 1px 15px rgba(00, 59, 95, .5);
+}
+
+.delete-button {
+    background-color: rgb(216, 22, 22, .5);
+}
+
+.delete-button:hover {
+    box-shadow: 0px 1px 15px rgba(192, 0, 0);
+}
+
+@media screen and (max-width: 1350px) {
+    .pets-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .pets-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pet-wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+
+    main,
+    header {
+        padding: 30px 10px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    body {
+        min-width: 400px;
+    }
+
+    header {
+        min-width: 380px;
+    }
+
+    .pet-wrapper {
+        min-width: 380px;
+    }
+
+    .pet-text-wrapper {
+        font-size: 1.5rem;
+    }
+}
